@@ -32,6 +32,7 @@ open class ActionSheetStandardPresenter: ActionSheetPresenter {
     var actionSheet: ActionSheet?
     var animationDelay: TimeInterval = 0
     var animationDuration: TimeInterval = 0.3
+    var animationOptions: UIView.AnimationOptions = [.curveEaseOut]
     
     
     // MARK: - ActionSheetPresenter
@@ -93,7 +94,7 @@ open class ActionSheetStandardPresenter: ActionSheetPresenter {
         UIView.animate(
             withDuration: animationDuration,
             delay: animationDelay,
-            options: [.curveEaseOut],
+            options: animationOptions,
             animations: animation) { _ in completion?() }
     }
     
