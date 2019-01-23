@@ -28,11 +28,11 @@ open class ActionSheetStandardPresenter: ActionSheetPresenter {
     
     public var events = ActionSheetPresenterEvents()
     public var isDismissableWithTapOnBackground = true
+    public var animationOptions: UIView.AnimationOptions = [.curveEaseOut]
     
     var actionSheet: ActionSheet?
     var animationDelay: TimeInterval = 0
     var animationDuration: TimeInterval = 0.3
-    var animationOptions: UIView.AnimationOptions = [.curveEaseOut]
     
     
     // MARK: - ActionSheetPresenter
